@@ -1,0 +1,80 @@
+C:\git\State Management Lab\State Management Lab\obj\Debug\State Management Lab.csprojAssemblyReference.cache
+C:\git\State Management Lab\State Management Lab\obj\Debug\State Management Lab.csproj.CoreCompileInputs.cache
+C:\git\State Management Lab\State Management Lab\bin\State Management Lab.dll.config
+C:\git\State Management Lab\State Management Lab\bin\State Management Lab.dll
+C:\git\State Management Lab\State Management Lab\bin\State Management Lab.pdb
+C:\git\State Management Lab\State Management Lab\bin\roslyn\csc.exe
+C:\git\State Management Lab\State Management Lab\bin\roslyn\csc.exe.config
+C:\git\State Management Lab\State Management Lab\bin\roslyn\csc.rsp
+C:\git\State Management Lab\State Management Lab\bin\roslyn\csi.exe
+C:\git\State Management Lab\State Management Lab\bin\roslyn\csi.exe.config
+C:\git\State Management Lab\State Management Lab\bin\roslyn\csi.rsp
+C:\git\State Management Lab\State Management Lab\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\git\State Management Lab\State Management Lab\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\git\State Management Lab\State Management Lab\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\git\State Management Lab\State Management Lab\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\git\State Management Lab\State Management Lab\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\git\State Management Lab\State Management Lab\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\git\State Management Lab\State Management Lab\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\git\State Management Lab\State Management Lab\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\git\State Management Lab\State Management Lab\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\git\State Management Lab\State Management Lab\bin\roslyn\Microsoft.Managed.Core.targets
+C:\git\State Management Lab\State Management Lab\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\git\State Management Lab\State Management Lab\bin\roslyn\System.AppContext.dll
+C:\git\State Management Lab\State Management Lab\bin\roslyn\System.Collections.Immutable.dll
+C:\git\State Management Lab\State Management Lab\bin\roslyn\System.Console.dll
+C:\git\State Management Lab\State Management Lab\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\git\State Management Lab\State Management Lab\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\git\State Management Lab\State Management Lab\bin\roslyn\System.IO.Compression.dll
+C:\git\State Management Lab\State Management Lab\bin\roslyn\System.IO.FileSystem.dll
+C:\git\State Management Lab\State Management Lab\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\git\State Management Lab\State Management Lab\bin\roslyn\System.IO.Pipes.AccessControl.dll
+C:\git\State Management Lab\State Management Lab\bin\roslyn\System.IO.Pipes.dll
+C:\git\State Management Lab\State Management Lab\bin\roslyn\System.Reflection.Metadata.dll
+C:\git\State Management Lab\State Management Lab\bin\roslyn\System.Security.AccessControl.dll
+C:\git\State Management Lab\State Management Lab\bin\roslyn\System.Security.Claims.dll
+C:\git\State Management Lab\State Management Lab\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\git\State Management Lab\State Management Lab\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\git\State Management Lab\State Management Lab\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\git\State Management Lab\State Management Lab\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\git\State Management Lab\State Management Lab\bin\roslyn\System.Security.Principal.Windows.dll
+C:\git\State Management Lab\State Management Lab\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\git\State Management Lab\State Management Lab\bin\roslyn\System.ValueTuple.dll
+C:\git\State Management Lab\State Management Lab\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\git\State Management Lab\State Management Lab\bin\roslyn\System.Xml.XmlDocument.dll
+C:\git\State Management Lab\State Management Lab\bin\roslyn\System.Xml.XPath.dll
+C:\git\State Management Lab\State Management Lab\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\git\State Management Lab\State Management Lab\bin\roslyn\vbc.exe
+C:\git\State Management Lab\State Management Lab\bin\roslyn\vbc.exe.config
+C:\git\State Management Lab\State Management Lab\bin\roslyn\vbc.rsp
+C:\git\State Management Lab\State Management Lab\bin\roslyn\VBCSCompiler.exe
+C:\git\State Management Lab\State Management Lab\bin\roslyn\VBCSCompiler.exe.config
+C:\git\State Management Lab\State Management Lab\bin\Antlr3.Runtime.dll
+C:\git\State Management Lab\State Management Lab\bin\Microsoft.AspNet.TelemetryCorrelation.dll
+C:\git\State Management Lab\State Management Lab\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\git\State Management Lab\State Management Lab\bin\Microsoft.Web.Infrastructure.dll
+C:\git\State Management Lab\State Management Lab\bin\Newtonsoft.Json.dll
+C:\git\State Management Lab\State Management Lab\bin\System.Diagnostics.DiagnosticSource.dll
+C:\git\State Management Lab\State Management Lab\bin\System.Web.Helpers.dll
+C:\git\State Management Lab\State Management Lab\bin\System.Web.Mvc.dll
+C:\git\State Management Lab\State Management Lab\bin\System.Web.Optimization.dll
+C:\git\State Management Lab\State Management Lab\bin\System.Web.Razor.dll
+C:\git\State Management Lab\State Management Lab\bin\System.Web.WebPages.Deployment.dll
+C:\git\State Management Lab\State Management Lab\bin\System.Web.WebPages.dll
+C:\git\State Management Lab\State Management Lab\bin\System.Web.WebPages.Razor.dll
+C:\git\State Management Lab\State Management Lab\bin\WebGrease.dll
+C:\git\State Management Lab\State Management Lab\bin\System.Web.Helpers.xml
+C:\git\State Management Lab\State Management Lab\bin\System.Web.Mvc.xml
+C:\git\State Management Lab\State Management Lab\bin\System.Web.Optimization.xml
+C:\git\State Management Lab\State Management Lab\bin\System.Web.Razor.xml
+C:\git\State Management Lab\State Management Lab\bin\System.Web.WebPages.xml
+C:\git\State Management Lab\State Management Lab\bin\System.Web.WebPages.Deployment.xml
+C:\git\State Management Lab\State Management Lab\bin\System.Web.WebPages.Razor.xml
+C:\git\State Management Lab\State Management Lab\bin\Newtonsoft.Json.xml
+C:\git\State Management Lab\State Management Lab\bin\Antlr3.Runtime.pdb
+C:\git\State Management Lab\State Management Lab\bin\System.Diagnostics.DiagnosticSource.xml
+C:\git\State Management Lab\State Management Lab\bin\Microsoft.AspNet.TelemetryCorrelation.xml
+C:\git\State Management Lab\State Management Lab\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\git\State Management Lab\State Management Lab\obj\Debug\State Management Lab.csproj.CopyComplete
+C:\git\State Management Lab\State Management Lab\obj\Debug\State Management Lab.dll
+C:\git\State Management Lab\State Management Lab\obj\Debug\State Management Lab.pdb

@@ -1,0 +1,17 @@
+﻿<h2>Welcome to the State of Management!</h2>
+
+@if (ViewBag.CurrentUser == null)
+{
+    <form action="~/Home/Register" method="get">
+        <input type="submit" value="Register" />
+    </form>
+
+    <form action="~/Home/Login" method="get">
+        <input type="submit" value="Login" />
+    </form>
+}
+
+@if (ViewBag.CurrentUser != null)
+{
+    @Html.ActionLink("Logout","Logout","Home")
+}
