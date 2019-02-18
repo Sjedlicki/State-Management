@@ -39,13 +39,16 @@ namespace State_Management_Lab.Controllers
             {
                 userData = (User)Session["CurrentUser"];
                 ViewBag.CurrentUser = userData;
-                Session["storedInfo"] = userData;
                 return View();
             }
             else
             {
                 if (ModelState.IsValid)
                 {
+                    if (Session["storedInfo"] != null)
+                    {
+                        storedInfo = (List<User>)Session["storedInfo"];
+                    }
                     storedInfo.Add(userData);
                     Session["storedInfo"] = storedInfo;
                     Session["CurrentUser"] = userData;                    
@@ -93,8 +96,7 @@ namespace State_Management_Lab.Controllers
                 foreach (User u in storedInfo)
                 if (u.Email == us.Email && u.Password == us.Password)
                 {
-                    Session["storedInfo"] = storedInfo;
-                    ViewBag.Person = Session["storedInfo"];
+                    Session["CurrentUser"] = u;
                     return RedirectToAction("ReturnUser");
                 }
             return View("ReturnUser");
@@ -102,7 +104,7 @@ namespace State_Management_Lab.Controllers
 
         public ActionResult ReturnUser()
         {
-            ViewBag.Person = Session["storedInfo"];
+            ViewBag.Person = Session["CurrentUser"];
             return View();
         }
 
