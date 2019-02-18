@@ -13,8 +13,12 @@
 
 @if (ViewBag.CurrentUser != null)
 {
-    
-    <p>Welcome </p>@ViewBag.CurrentUser.Name
+
+    <p>Welcome @ViewBag.CurrentUser.Name</p>
     <br />
-    @Html.ActionLink("Logout","Logout","Home")
+
+            <li>@Html.ActionLink("Shop", "ListItems", "Home")</li>
+
+    <br />
+    @Html.ActionLink("Logout", "Logout", "Home")
 }

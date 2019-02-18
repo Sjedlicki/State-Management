@@ -13,11 +13,11 @@ namespace State_Management_Lab.Controllers
 
         List<Items> ItemList = new List<Items>()
         {
-           new Items("Hot Chocolate", "Milk, Cocoa, Sugar, Fat", 1.99),
+           new Items("Hot Chocolate", "Milk, Cocoa, Sugar, Fat", 2.49),
            new Items("Latte",  "Milk, Coffee", 1.99),
-           new Items("Coffee",  "Coffee, Water", 1.00),
-           new Items("Tea", "Black Tea", 1.00),
-           new Items("Frozen Lemonade",  "Lemon, Sugar, Ice", 1.99)
+           new Items("Coffee",  "Coffee, Water", 0.99),
+           new Items("Tea", "Black Tea", 1.25),
+           new Items("Frozen Lemonade",  "Lemon, Sugar, Ice", 2.99)
         };
 
         List<Items> ShoppingCart = new List<Items>();
@@ -105,28 +105,35 @@ namespace State_Management_Lab.Controllers
 
         public ActionResult ListItems()
         {
-            ViewBag.ItemsList = ItemList;
-            return View();
+            if (Session["CurrentUser"] == null)
+            {
+                return View("Error");
+            }
+            else
+            {
+                ViewBag.ItemsList = ItemList;
+                return View();
+            }
         }
 
         public ActionResult AddItem(string itemName)
         {
-            if(Session["ShoppingCart"] != null)
-            {
-                ShoppingCart = (List<Items>)Session["ShoppingCart"];
-            }
-
-            // Find item in list.
-            foreach(Items item in ItemList)
-            {
-                if(item.ItemName == itemName)
+                if (Session["ShoppingCart"] != null)
                 {
-                    ShoppingCart.Add(item);
+                    ShoppingCart = (List<Items>)Session["ShoppingCart"];
                 }
-            }
 
-            Session["ShoppingCart"] = ShoppingCart;
-            return RedirectToAction("ListItems");
+                // Find item in list.
+                foreach (Items item in ItemList)
+                {
+                    if (item.ItemName == itemName)
+                    {
+                        ShoppingCart.Add(item);
+                    }
+                }
+
+                Session["ShoppingCart"] = ShoppingCart;
+                return RedirectToAction("ListItems");
         }
 
         public ActionResult RemoveItem(string itemName)
