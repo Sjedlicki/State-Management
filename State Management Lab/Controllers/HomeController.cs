@@ -131,11 +131,16 @@ namespace State_Management_Lab.Controllers
 
         public ActionResult RemoveItem(string itemName)
         {
-            for (int i = 0; i < ShoppingCart.Count; i++)
+            if (Session["ShoppingCart"] != null)
             {
-                if (itemName == ShoppingCart[i].ItemName)
+                ShoppingCart = (List<Items>)Session["ShoppingCart"];
+            }
+
+            foreach (Items item in ShoppingCart)
+            {
+                if (itemName == item.ItemName)
                 {
-                    ShoppingCart.RemoveAt(i);
+                    ShoppingCart.Remove(item);
                     Session["ShoppingCart"] = ShoppingCart;
                     break;
                 }
