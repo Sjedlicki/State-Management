@@ -88,11 +88,6 @@ namespace State_Management_Lab.Controllers
         {
             storedInfo = (List<User>)Session["storedInfo"];
 
-            if (Session["CurrentUser"] == Session["storedInfo"])
-                {
-                    return View("Error");
-                }
-
                 foreach (User u in storedInfo)
                 if (u.Email == us.Email && u.Password == us.Password)
                 {
@@ -132,6 +127,27 @@ namespace State_Management_Lab.Controllers
 
             Session["ShoppingCart"] = ShoppingCart;
             return RedirectToAction("ListItems");
+        }
+
+        public ActionResult RemoveItem(string itemName)
+        {
+            for (int i = 0; i < ShoppingCart.Count; i++)
+            {
+                if (itemName == ShoppingCart[i].ItemName)
+                {
+                    ShoppingCart.RemoveAt(i);
+                    Session["ShoppingCart"] = ShoppingCart;
+                    break;
+                }
+            }
+            ViewBag.Cart = Session["ShoppingCart"];
+            return RedirectToAction("Cart");
+        }
+
+        public ActionResult Cart()
+        {
+            ViewBag.Cart = Session["ShoppingCart"];
+            return View();
         }
     }
 }
