@@ -83,8 +83,9 @@ namespace State_Management_Lab.Controllers
 
         public ActionResult ValidLogin(User us)
         {
-            
-                if(Session["CurrentUser"] == Session["storedInfo"])
+            storedInfo = (List<User>)Session["storedInfo"];
+
+            if (Session["CurrentUser"] == Session["storedInfo"])
                 {
                     return View("Error");
                 }
@@ -92,8 +93,8 @@ namespace State_Management_Lab.Controllers
                 foreach (User u in storedInfo)
                 if (u.Email == us.Email && u.Password == us.Password)
                 {
-                    storedInfo = (List<User>)Session["storedInfo"];
-                    ViewBag.Person = (List<User>)Session["storedInfo"];
+                    Session["storedInfo"] = storedInfo;
+                    ViewBag.Person = Session["storedInfo"];
                     return RedirectToAction("ReturnUser");
                 }
             return View("ReturnUser");
