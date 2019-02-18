@@ -22,3 +22,19 @@ select,
 textarea {
     max-width: 280px;
 }
+
+
+#RegForm {
+    background-color: lightgray;
+    height: auto;
+    width:500px;
+}
+
+#form {
+    height:auto;
+    width: 250px;
+    margin-top: 10px;
+    padding-bottom: 20px;
+    display: inline-block;
+    border: 1px solid grey;
+}

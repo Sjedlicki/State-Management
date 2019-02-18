@@ -86,7 +86,14 @@ namespace State_Management_Lab.Controllers
 
         public ActionResult ValidLogin(User us)
         {
-            storedInfo = (List<User>)Session["storedInfo"];
+            if (Session["storedInfo"] != null)
+            {
+                storedInfo = (List<User>)Session["storedInfo"];
+            }
+            else
+            {
+                return View("Error");
+            }
 
                 foreach (User u in storedInfo)
                 if (u.Email == us.Email && u.Password == us.Password)

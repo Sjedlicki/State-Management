@@ -22,7 +22,7 @@
                 <ul class="nav navbar-nav">
                     @if (Session["CurrentUser"] != null)
                     {
-                    <li>@Html.ActionLink("Shop", "ListItems", "Home")</li>
+                    <li id="Shopp">@Html.ActionLink("Shop", "ListItems", "Home")</li>
                     <li>@Html.ActionLink("Logout","Logout","Home")</li>
                     }
                 </ul>
