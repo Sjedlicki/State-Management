@@ -11,6 +11,17 @@ namespace State_Management_Lab.Controllers
     {
         List<User> storedInfo = new List<User>();
 
+        List<Items> ItemList = new List<Items>()
+        {
+           new Items("Hot Chocolate", "Milk, Cocoa, Sugar, Fat", 1.99),
+           new Items("Latte",  "Milk, Coffee", 1.99),
+           new Items("Coffee",  "Coffee, Water", 1.00),
+           new Items("Tea", "Black Tea", 1.00),
+           new Items("Frozen Lemonade",  "Lemon, Sugar, Ice", 1.99)
+        };
+
+        List<Items> ShoppingCart = new List<Items>();
+
         public ActionResult Index()
         {
             ViewBag.CurrentUser = (User)Session["CurrentUser"];
@@ -28,6 +39,7 @@ namespace State_Management_Lab.Controllers
             {
                 userData = (User)Session["CurrentUser"];
                 ViewBag.CurrentUser = userData;
+                Session["storedInfo"] = userData;
                 return View();
             }
             else
@@ -35,15 +47,16 @@ namespace State_Management_Lab.Controllers
                 if (ModelState.IsValid)
                 {
                     storedInfo.Add(userData);
-                    Session["CurrentUser"] = userData;
+                    Session["storedInfo"] = storedInfo;
+                    Session["CurrentUser"] = userData;                    
                     return RedirectToAction("DisplayInfo");
                 }
                 else
                 {
                     ViewBag.ErrorMessage = "Registration failed. Try again.";
                     return View("Error");
-                }
-            }
+                }             
+            }            
         }
 
         public ActionResult DisplayInfo(User u)
@@ -52,15 +65,13 @@ namespace State_Management_Lab.Controllers
             return View();
         }
 
-        public ActionResult Login(User us)
+        public ActionResult Login()
         {
-
-            ViewBag.User = us;
             return View();
         }
 
         public ActionResult Logout()
-        {
+        {            
             Session.Remove("CurrentUser");
             return View();
         }
@@ -72,12 +83,52 @@ namespace State_Management_Lab.Controllers
 
         public ActionResult ValidLogin(User us)
         {
-            foreach (User u in storedInfo)
-                if ((us.Email.Contains(u.Email)) && (us.Password.Contains(u.Password)))
+            
+                if(Session["CurrentUser"] == Session["storedInfo"])
                 {
-                    return RedirectToAction("DisplayInfo");
+                    return View("Error");
                 }
-            return View("DisplayInfo");
+
+                foreach (User u in storedInfo)
+                if (u.Email == us.Email && u.Password == us.Password)
+                {
+                    storedInfo = (List<User>)Session["storedInfo"];
+                    ViewBag.Person = (List<User>)Session["storedInfo"];
+                    return RedirectToAction("ReturnUser");
+                }
+            return View("ReturnUser");
+        }
+
+        public ActionResult ReturnUser()
+        {
+            ViewBag.Person = Session["storedInfo"];
+            return View();
+        }
+
+        public ActionResult ListItems()
+        {
+            ViewBag.ItemsList = ItemList;
+            return View();
+        }
+
+        public ActionResult AddItem(string itemName)
+        {
+            if(Session["ShoppingCart"] != null)
+            {
+                ShoppingCart = (List<Items>)Session["ShoppingCart"];
+            }
+
+            // Find item in list.
+            foreach(Items item in ItemList)
+            {
+                if(item.ItemName == itemName)
+                {
+                    ShoppingCart.Add(item);
+                }
+            }
+
+            Session["ShoppingCart"] = ShoppingCart;
+            return RedirectToAction("ListItems");
         }
     }
 }
